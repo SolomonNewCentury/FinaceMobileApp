@@ -1,0 +1,50 @@
+{
+  "name": "Finance",
+  "version": "0.0.1",
+  "description": "iOS's Stocks App clone written in React Native for demo purpose. Data is pulled from Yahoo Finance.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build-android": "npm run release-android; osascript -e 'display notification \"DONE!\" with title \"Android built\"'",
+    "bundle-android": "$NVM_BIN/react-native bundle --platform android --dev false --entry-file ./index.android.js --bundle-output android/app/src/main/assets/index.android.bundle # --assets-dest android/app/src/main/res/",
+    "release-android": "cd android && ./gradlew assembleRelease && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7kfpun/FinanceReactNative.git"
+  },
+  "keywords": [
+    "react-native",
+    "android",
+    "ios",
+    "finance",
+    "stocks",
+    "yahoo-finance"
+  ],
+  "author": "kf <7kfpun@gmail.com> (https://github.com/7kfpun)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7kfpun/FinanceReactNative/issues"
+  },
+  "homepage": "https://github.com/7kfpun/FinanceReactNative#readme",
+  "dependencies": {
+    "alt": "^0.18.6",
+    "moment": "^2.18.1",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.2",
+    "react-native-navbar": "^1.7.1",
+    "react-native-router-flux": "^3.39.2",
+    "react-native-simple-store": "^1.2.0",
+    "react-native-vector-icons": "^4.2.0",
+    "rn-viewpager": "^1.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-flowtype-errors": "^3.3.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "flow-bin": "^0.47.0"
+  }
+}
